@@ -258,11 +258,11 @@ useEffect(() => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer 7757df07-bf34-4e04-b8d5-7062fca325ff',
+          'Authorization': `Bearer ${process.env.REACT_APP_CHATBASE_API_KEY}`,
         },
         body: JSON.stringify({
           messages: apiMessages,
-          chatbotId: 'WqQhkIYvKlQ0ouhoPGHfZ',
+          chatbotId: process.env.REACT_APP_CHATBASE_BOT_ID,
           stream: true,
           temperature: 0,
           model: 'claude-3-5-sonnet'
